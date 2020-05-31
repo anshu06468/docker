@@ -14,3 +14,6 @@ deploy:
   default: true
   on:
     branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_bb5679275c9e_key -iv $encrypted_bb5679275c9e_iv
+  -in docker-278914-180552d8aba3.json.enc -out docker-278914-180552d8aba3.json -d
