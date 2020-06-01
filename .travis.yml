@@ -8,10 +8,8 @@ script:
 - docker run -e CI=true reactapp npm run test
 deploy:
   provider: gae
-  skip_cleanup: true
   keyfile: docker-278914-180552d8aba3.json
   project: docker-278914
-  default: true
   on:
     branch: master
 before_install:
